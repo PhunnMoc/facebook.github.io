@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    position: relative;
+}
+
+:root {
+    --nav_heigh: 56px;
+    --width_sidebar: 612px;
+    --icon_large_size: 40px;
+    --icon_mini_size: 36px;
+    --blue: #0165e1;
+    --white: #ffffff;
+    --gray: #e4e6eb;
+    --gray_hover: #cbcbcb;
+    --text_gray: #5a5a5a;
+    --margin_icon_nav: 3px;
+    --background_gray: #f0f2f5;
+    --font_sidebar: 15px;
+    --trany_sidebar: 36px;
+}
+.pink{
+    background-color: pink;
+}
+.blue{
+    background-color: blue;
+}
+/* sidebar scroll */
+/* .scrollbar{
+
+}
+.sidebar--scroll {
+    width: 10px;
+    height: 100%;
+    background: black;
+    float: right;
+} */
+
+/* sidebar scroll */
+.righter--infor::-webkit-scrollbar,
+.leftter--infor::-webkit-scrollbar {
+    width: 16px;
+
+
+}
+
+/* Track */
+
+
+::-webkit-scrollbar-track:hover {
+    background-color: var(--gray);
+}
+
+::-webkit-scrollbar-thumb:hover {
+
+    border: 4px solid var(--gray) !important;
+}
+
+/* Handle */
+.righter--infor::-webkit-scrollbar-thumb,
+.leftter--infor::-webkit-scrollbar-thumb {
+    background: #c6c6c6;
+    visibility: hidden;
+    border-radius: 20px;
+    border: 4px solid var(--background_gray);
+}
+
+/* Handle on hover */
+
+.righter--infor:hover::-webkit-scrollbar-thumb,
+.leftter--infor:hover::-webkit-scrollbar-thumb {
+    visibility: visible;
+
+}
+
+/* .sidebar--scroll {
+    position: absolute;
+    width: 12px;
+    height: 100%;
+    background-color: #5a5a5a;
+ba    right: -10px;
+} */
+
+.content--sidebar {
+    z-index: 0;
+    top: var(--nav_heigh);
+    bottom: 0;
+    max-width: 360px;
+    min-width: 280px;
+    flex-basis: 360px;
+    background: var(--background_gray);
+    transform: translateY(var(--nav_heigh));
+
+}
+
+.righter--infor,
+.leftter--infor {
+    overflow-y: auto;
+    position: -webkit-sticky;
+    position: sticky;
+    top: 0;
+    bottom: 0;
+    max-width: none;
+}
+
+.content--sidebar--left {
+    left: 0;
+
+}
+
+.content--sidebar--right {
+    right: 0;
+}
+
+hr.sidebar_hr {
+    border-top: 1px solid var(--gray_hover);
+    margin: 8px 15px 0;
+}
